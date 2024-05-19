@@ -14,6 +14,12 @@ app.use("/posts", postRouter)
 connection
 
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "hello on my project"
+    })
+})
+
 app.use("*", (req, res) => {
     res.status(404).json({
         message: "page not found"
